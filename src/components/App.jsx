@@ -4,7 +4,7 @@ import getUsersfromApi from "../services/getUsersfromApi";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, matchPath } from "react-router-dom";
 
 function App() {
     const [objects, setObjects] = useState([]);
@@ -23,7 +23,16 @@ function App() {
     const filteredCharacters = objects.filter((object) => {
         return object.name.toLowerCase().includes(filterName);
     })
-    console.log(filteredCharacters);
+    
+    const { pathname } = useLocation();
+    const routeData = matchPath("/detail/:id", pathname);
+    console.log(routeData);
+    let idCharacter = undefined;
+    if (routeData !== null) {
+        idCharacter = routeData.params.id;
+    }
+    console.log(idCharacter); //no estoy segura de que funcione
+    
 
     return (
         <>
