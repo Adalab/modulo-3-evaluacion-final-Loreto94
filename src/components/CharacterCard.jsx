@@ -6,7 +6,7 @@ function CharacterCard ({ characterData }) {
             <Link to={'/detail/${characterData.id}'}>
                 <img src={characterData.image} alt={characterData.name} />
                 <h4>{characterData.name}</h4>
-                <p>{characterData.species}</p>
+                <p>{characterData.specie}</p>
             </Link>
         </li>    
     )
