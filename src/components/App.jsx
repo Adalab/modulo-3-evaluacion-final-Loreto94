@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import getUsersfromApi from "../services/getUsersfromApi";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 function App() {
     const [objects, setObjects] = useState([]);
@@ -29,8 +31,16 @@ function App() {
             <h1>Rick y Morty</h1>
         </header>
         <main>
-            <Filters onChangeName={changeName} />
-            <CharactersList charactersData={filteredCharacters} />
+            <Routes>
+                <Route path="/" element={(
+                    <>
+                        <Filters onChangeName={changeName} />
+                        <CharactersList charactersData={filteredCharacters} />
+                    </>  
+                )} />
+                <Route path="/detail/:id" element={<CharacterDetail />} />
+            </Routes>
+            
         </main>
         </>
     )
