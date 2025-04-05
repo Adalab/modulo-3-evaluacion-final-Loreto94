@@ -26,12 +26,12 @@ function App() {
     
     const { pathname } = useLocation();
     const routeData = matchPath("/detail/:id", pathname);
-    console.log(routeData);
+
     let idCharacter = undefined;
-    if (routeData !== null) {
+    if (routeData !== null){
         idCharacter = routeData.params.id;
     }
-    console.log(idCharacter); //no estoy segura de que funcione
+    console.log(idCharacter); 
     
 
     return (
