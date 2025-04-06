@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard";
+import "../scss/components/CharactersList.scss";
 
 function CharactersList ({ charactersData }) {
     return (

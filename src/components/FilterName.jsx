@@ -1,3 +1,4 @@
+import "../scss/components/FilterName.scss";
 
 function FilterName ({ onChangeName }) {
     const handleChangeName = (event) => {
@@ -5,10 +6,10 @@ function FilterName ({ onChangeName }) {
     }
 
     return (
-        <div>
+        <form>
             <label htmlFor="name">Nombre del personaje: </label>
-            <input type="text" id="name" onChange={handleChangeName} />
-        </div>
+            <input className="input" type="text" id="name" onChange={handleChangeName} />
+        </form>
     )
 }
 

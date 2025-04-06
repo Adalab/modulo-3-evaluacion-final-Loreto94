@@ -1,14 +1,14 @@
 
-function CharacterDetail () {
-
+function CharacterDetail ({ character }) {
+    console.log(character);
     return (
         <section>
-            <img src="" alt="" />
-            <h4>Name</h4>
-            <p>Species</p>
-            <p>LocationName</p>
-            <p>Status</p>
-            <p>Episodes</p>
+            <img src={character.image} alt={character.name} />
+            <h4>{character.name}</h4>
+            <p>Specie: {character.specie}</p>
+            <p>Origin: LocatioName</p>
+            <p>Status: </p>
+            <p>Episodes: </p>
         </section>
     )
 }

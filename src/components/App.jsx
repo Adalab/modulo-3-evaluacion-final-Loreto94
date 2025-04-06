@@ -1,6 +1,7 @@
 import "../scss/App.scss";
 import { useEffect, useState } from "react";
 import getUsersfromApi from "../services/getUsersfromApi";
+import Header from "./Header";
 import CharactersList from "./CharactersList";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
@@ -30,7 +31,7 @@ function App() {
     console.log(routeData);
 
     let idCharacterRoute = undefined;
-    if (routeData != null) {
+    if (routeData !== null) {
         idCharacterRoute = routeData.params.id
     }
     console.log(idCharacterRoute);
@@ -42,7 +43,7 @@ function App() {
     return (
         <>
         <header>
-            <h1>Rick y Morty</h1>
+            <Header />
         </header>
         <main>
             <Routes>
@@ -52,7 +53,7 @@ function App() {
                         <CharactersList charactersData={filteredCharacters} />
                     </>  
                 )} />
-                <Route path="/detail/:id" element={<CharacterDetail />} />
+                <Route path="/detail/:id" element={<CharacterDetail character={characterSelected} />} />
             </Routes>
             
         </main>
