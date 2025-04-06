@@ -1,15 +1,15 @@
 
-li {
-    
-    background-color: #01b1c9
-    
-}
-.card-image {
-    width: 100%;
-   
+.card {
+    display: flex;
+    justify-content: center;
+
+    &-image {
+        
+    }
 
 }
-.text {
+
+.detailText {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -17,3 +17,6 @@ li {
     padding: 5px;
     color: white;
 }
+
+ 
+

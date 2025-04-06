@@ -41,7 +41,7 @@ function App() {
     console.log(characterSelected);
 
     return (
-        <>
+        <div className="page">
         <header>
             <Header />
         </header>
@@ -57,7 +57,7 @@ function App() {
             </Routes>
             
         </main>
-        </>
+        </div>
     )
 }
 
