@@ -9,6 +9,7 @@ import { Routes, Route, useLocation, matchPath } from "react-router-dom";
 function App() {
     const [objects, setObjects] = useState([]);
     const [filterName, setFilterName] = useState("");
+   
 
     useEffect(()=>{
         getUsersfromApi().then(characters => {
@@ -26,13 +27,17 @@ function App() {
     
     const { pathname } = useLocation();
     const routeData = matchPath("/detail/:id", pathname);
+    console.log(routeData);
 
-    let idCharacter = undefined;
-    if (routeData !== null){
-        idCharacter = routeData.params.id;
+    let idCharacterRoute = undefined;
+    if (routeData != null) {
+        idCharacterRoute = routeData.params.id
     }
-    console.log(idCharacter); 
-    
+    console.log(idCharacterRoute);
+    const characterSelected = filteredCharacters.find((character) => {
+        return character.id = idCharacterRoute
+    });
+    console.log(characterSelected);
 
     return (
         <>

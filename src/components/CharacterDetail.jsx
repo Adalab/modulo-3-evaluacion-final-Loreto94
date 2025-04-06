@@ -1,5 +1,6 @@
 
 function CharacterDetail () {
+
     return (
         <section>
             <img src="" alt="" />
