@@ -53,9 +53,8 @@ function App() {
                         <CharactersList charactersData={filteredCharacters} />
                     </>  
                 )} />
-                <Route path="/detail/:id" element={<CharacterDetail character={characterSelected} />} />
+                <Route className="detailPage" path="/detail/:id" element={<CharacterDetail character={characterSelected} />} />
             </Routes>
-            
         </main>
         </div>
     )

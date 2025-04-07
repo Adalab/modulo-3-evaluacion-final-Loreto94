@@ -6,10 +6,10 @@ function FilterName ({ onChangeName }) {
     }
 
     return (
-        <form>
+        <>
             <label htmlFor="name">Nombre del personaje: </label>
             <input className="input" type="text" id="name" onChange={handleChangeName} />
-        </form>
+        </>
     )
 }
 
