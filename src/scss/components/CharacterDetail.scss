@@ -1,13 +1,21 @@
 
+.container-card{
+    display: flex;
+    justify-content: center;
+}
 .detail-card {
-    
         display: flex;
-        justify-content: center;
-        width: 30vh;
+        justify-content: flex-start;
+        width: 65%;
         background-color: #01b1c9;
+        padding: 20px;
+        
     }
 
-
+.detail-image {
+    width: 40%;
+    align-self: flex-start;
+}
 
 .detail-text {
         display: flex;
@@ -17,6 +25,11 @@
         padding: 5px;
         color: white;
     }
+
+.character-not-found {
+    color: aliceblue;
+}
+
 
 
  

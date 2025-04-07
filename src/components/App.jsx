@@ -28,17 +28,15 @@ function App() {
     
     const { pathname } = useLocation();
     const routeData = matchPath("/detail/:id", pathname);
-    console.log(routeData);
-
-    let idCharacterRoute = undefined;
+    
+    let characterSelected;
     if (routeData !== null) {
-        idCharacterRoute = routeData.params.id
+        characterSelected = objects.find((character) => {
+            return character.id === parseInt(routeData.params.id)
+        });
     }
-    console.log(idCharacterRoute);
-    const characterSelected = filteredCharacters.find((character) => {
-        return character.id = idCharacterRoute
-    });
-    console.log(characterSelected);
+   
+    
 
     return (
         <div className="page">
@@ -53,7 +51,7 @@ function App() {
                         <CharactersList charactersData={filteredCharacters} />
                     </>  
                 )} />
-                <Route className="detailPage" path="/detail/:id" element={<CharacterDetail character={characterSelected} />} />
+                <Route path="/detail/:id" element={<CharacterDetail character={characterSelected} />} />
             </Routes>
         </main>
         </div>

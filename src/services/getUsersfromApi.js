@@ -5,7 +5,6 @@ const getUsersfromApi = () => {
         .then(response => response.json())
         .then(data => {
             const parsedCharacters = data.results.map((character) => {
-                console.log(character);
                 return (
                     {
                         id: character.id,

@@ -7,7 +7,7 @@ function CharactersList ({ charactersData }) {
             <ul>
                 {
                   charactersData.map((character) => {
-                    return <CharacterCard characterData={character} key={character.id} />
+                    return <li key={character.id}><CharacterCard characterData={character} /></li>
                   })  
                 }
             </ul>
